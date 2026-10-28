@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EmocionArte</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- =========================
+         MENÚ
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-imagen">
+                <img src="logo.png" width="30" height="30" alt="Logo">
+            </div>
+
+            <span>EmocionArte</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#" onclick="mostrarPestana('inicio'); return false;">
+                Inicio
+            </a>
+
+            <a href="#" onclick="mostrarPestana('emociones'); return false;">
+                Emociones
+            </a>
+
+            <a href="#" onclick="mostrarPestana('arte'); return false;">
+                Arte
+            </a>
+
+            <a href="#" onclick="mostrarPestana('contacto'); return false;">
+                Contacto
+            </a>
+
+            <a href="#" onclick="mostrarPestana('expresa'); return false;" class="nav-button">
+                Expresa la tuya
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         INICIO
+    ========================== -->
+
+    <section class="hero pestana" id="inicio">
+
+        <div class="hero-text">
+
+            <div class="tag">
+                • ARTE · EMOCIÓN · EXPRESIÓN •
+            </div>
+
+
+            <h1>
+                Donde las<br>
+                <span>emociones</span><br>
+                se vuelven arte
+            </h1>
+
+
+            <p>
+                Poemas, pinturas, música y creatividad:
+                cada forma de arte es un idioma para aquello
+                que sentimos y no siempre sabemos nombrar.
+            </p>
+
+
+            <div class="buttons">
+
+                <a href="#" class="btn btn-primary"
+                   onclick="mostrarPestana('arte'); return false;">
+                    Explorar el arte
+                </a>
+
+
+                <a href="#" class="btn btn-secondary"
+                   onclick="mostrarPestana('emociones'); return false;">
+                    Conocer emociones
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- IMAGEN PRINCIPAL -->
+
+        <div class="hero-image">
+
+            <img
+                src="imagenes/muneca.png"
+                width="500"
+                height="495"
+                alt="Ilustración de EmocionArte">
+
+            <div class="heart">
+                💗
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EMOCIONES
+    ========================== -->
+
+    <section class="emotions pestana" id="emociones">
+
+        <div class="emotions-title">
+
+            <div class="section-label">
+                DESCUBRE LO QUE SIENTES
+            </div>
+
+            <h2>
+                Cada emoción tiene su propio emoji 
+            </h2>
+
+        </div>
+
+
+
+        <div class="cards">
+
+
+            <!-- =====================
+                 ALEGRÍA
+            ====================== -->
+
+            <div class="card"
+                 onclick="abrirCarrusel('alegria')">
+
+                <div class="emoji">
+                    😊
+                </div>
+
+                <h3>
+                    Alegría
+                </h3>
+
+                <p>
+                    Una emoción que nos llena de energía,
+                    esperanza y ganas de compartir.
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================
+                 TRISTEZA
+            ====================== -->
+
+            <div class="card"
+                 onclick="abrirCarrusel('tristeza')">
+
+                <div class="emoji">
+                    😢
+                </div>
+
+                <h3>
+                    Tristeza
+                </h3>
+
+                <p>
+                    Nos permite reconocer lo que nos duele
+                    y expresar aquello que llevamos dentro.
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================
+                 ENOJO
+            ====================== -->
+
+            <div class="card"
+                 onclick="abrirCarrusel('enojo')">
+
+                <div class="emoji">
+                    😡
+                </div>
+
+                <h3>
+                    Enojo
+                </h3>
+
+                <p>
+                    Una emoción intensa que puede convertirse
+                    en fuerza para cambiar aquello que no nos gusta.
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================
+                 AMOR
+            ====================== -->
+
+            <div class="card"
+                 onclick="abrirCarrusel('amor')">
+
+                <div class="emoji">
+                    ❤️
+                </div>
+
+                <h3>
+                    Amor
+                </h3>
+
+                <p>
+                    Nos conecta con otras personas y nos inspira
+                    a crear, cuidar y compartir.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CARRUSEL DE EMOCIONES
+    ========================== -->
+
+    <div id="carrusel" class="carrusel-fondo">
+
+        <div class="carrusel">
+
+
+            <!-- CERRAR -->
+
+            <button
+                class="cerrar"
+                onclick="cerrarCarrusel()">
+                ×
+            </button>
+
+
+            <!-- INFORMACIÓN -->
+
+            <div id="contenidoCarrusel">
+
+            </div>
+
+
+            <!-- CONTROLES -->
+
+            <div class="controles">
+
+                <button
+                    onclick="anterior()">
+                    ❮
+                </button>
+
+
+                <span id="numeroPagina">
+                    1 / 3
+                </span>
+
+
+                <button
+                    onclick="siguiente()">
+                    ❯
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         ARTE
+    ========================== -->
+<!-- =========================
+     ARTE
+========================= -->
+
+<section class="art-section pestana" id="arte">
+
+    <!-- IMAGEN -->
+
+    <div class="art-box">
+
+        <img
+            src="imagenes/chica.png"
+            width="600"
+            height="500"
+            alt="Chica expresándose mediante el arte">
+
+    </div>
+
+
+    <!-- CONTENIDO -->
+
+    <div class="art-content">
+
+        <div class="section-label">
+            ARTE COMO EXPRESIÓN
+        </div>
+
+
+        <h2>
+            Convierte lo que sientes en
+            <span>algo hermoso.</span>
+        </h2>
+
+
+        <p>
+            No existe una única forma de expresar nuestras
+            emociones. El arte nos da libertad para encontrar
+            nuestra propia manera de hacerlo.
+        </p>
+
+
+        <ul class="list">
+
+            <li>
+                Escribir un poema cuando necesitas desahogarte.
+            </li>
+
+            <li>
+                Pintar usando los colores que representan tu estado de ánimo.
+            </li>
+
+            <li>
+                Escuchar o crear música para expresar lo que no puedes decir.
+            </li>
+
+            <li>
+                Utilizar el movimiento y la danza para liberar emociones.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- =========================
+         ACTIVIDADES ARTÍSTICAS
+    ========================== -->
+
+    <div class="actividades-arte">
+
+        <div class="section-label">
+            ACTIVIDADES PARA EXPRESARTE
+        </div>
+
+        <h3>
+            Actividades artísticas recomendadas
+        </h3>
+
+
+        <div class="actividad">
+
+            <strong>
+                🎨 Pintura y dibujo libre
+            </strong>
+
+            <p>
+                Usa colores, trazos o manchas en un papel para
+                representar lo que sientes sin juzgar el resultado.
+                Los tonos oscuros pueden servir para descargar
+                tensión, mientras que los colores brillantes ayudan
+                a elevar el ánimo.
+            </p>
+
+        </div>
+
+
+        <div class="actividad">
+
+            <strong>
+                ✍️ Escritura terapéutica o diario artístico
+            </strong>
+
+            <p>
+                Combina palabras, recortes de revistas y pequeños
+                dibujos en un cuaderno para registrar tu estado
+                de ánimo y expresar aquello que llevas dentro.
+            </p>
+
+        </div>
+
+
+        <div class="actividad">
+
+            <strong>
+                🧸 Modelado con arcilla o plastilina
+            </strong>
+
+            <p>
+                Moldear un sentimiento difícil con las manos permite
+                convertir algo abstracto en un objeto tangible que
+                puedes observar y dejar ir.
+            </p>
+
+        </div>
+
+
+        <div class="actividad">
+
+            <strong>
+                💃 Danzaterapia o movimiento libre
+            </strong>
+
+            <p>
+                Bailar al ritmo de una canción que refleje tu estado
+                de ánimo puede ayudarte a liberar la energía física
+                acumulada por el estrés o la tristeza.
+            </p>
+
+        </div>
+
+
+        <div class="actividad">
+
+            <strong>
+                🎵 Creación musical o sonora
+            </strong>
+
+            <p>
+                Tocar un instrumento de percusión o seguir un ritmo
+                con objetos cotidianos facilita la expresión de
+                emociones intensas.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     CONTACTO / NUESTRO EQUIPO
+========================= -->
+<section class="contacto pestana" id="contacto">
+
+    <!-- TÍTULO -->
+    <div class="contacto-titulo">
+
+        <div class="section-label">CONOCE NUESTRO EQUIPO</div>
+
+        <h2>
+            Las personas detrás de
+            <span>EmocionArte.</span>
+        </h2>
+
+        <p>
+            Conoce a las personas que hicieron posible
+            la creación de nuestra aplicación.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         PERSONAS DEL EQUIPO
+    ========================== -->
+    <div class="equipo">
+
+        <!-- SARA -->
+        <div class="persona">
+
+            <div class="foto-persona">
+                <img src="imagenes/sara.jpeg"
+                     alt="Foto de Sara Valentina">
+            </div>
+
+            <h3>Sara Valentina</h3>
+
+            <h4>Administradora</h4>
+
+            <p>
+                Participó en el diseño visual y en el desarrollo
+                de diferentes partes de EmocionArte.
+            </p>
+
+        </div>
+
+
+        <!-- SALOME -->
+        <div class="persona">
+
+            <div class="foto-persona">
+                <img src="imagenes/salom.jpeg"
+                     alt="Foto de Salome Jimenez">
+            </div>
+
+            <h3>Salome Jimenez</h3>
+
+            <h4>Analista</h4>
+
+            <p>
+                Se encargó de investigar, organizar y preparar
+                la información utilizada en la aplicación.
+            </p>
+
+        </div>
+
+
+        <!-- KEYLA -->
+        <div class="persona">
+
+            <div class="foto-persona">
+                <img src="imagenes/keyla.jpeg"
+                     alt="Foto de Keyla Serna">
+            </div>
+
+            <h3>Keyla Serna</h3>
+
+            <h4>Diseño</h4>
+
+            <p>
+                Participó en la creación de los elementos
+                visuales y en la organización del proyecto.
+            </p>
+
+        </div>
+
+
+        <!-- MARIANA -->
+        <div class="persona">
+
+            <div class="foto-persona">
+                <img src="imagenes/Luna.jpeg"
+                     alt="Foto de Mariana Luna">
+            </div>
+
+            <h3>Mariana Luna</h3>
+
+            <h4>Programación</h4>
+
+            <p>
+                Apoyó en la programación y funcionamiento
+                de la aplicación.
+            </p>
+
+        </div>
+
+    </div>
+    <!-- =========================
+         FORMULARIO
+    ========================== -->
+    <form action="registror.php" class="formulario-emocion" method="POST">
+        <table >
+            <tr>
+                <td>
+                    <label for="name">Nombre:</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Coloque su nombre" maxlength="50" required name="nombre" id="nombre">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lastname">Apellido</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="apellido"  name="apellido" id="apellido">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Edad</label>
+                </td>
+                <td>
+                    <input type="number" placeholder="edad"  name="edad" id="edad">
+                </td>
+            </tr>
+                <td>
+                    <label for="description">Experiencia</label>
+                </td>
+                <td>
+                    <textarea name="experiencia" placeholder="Escriba su experiencia" id="experiencia" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sentimiento">Sentimiento</label>
+                </td>
+                <td>
+                    <select name="sentimiento" id="sentimiento">
+                        <option>Seleccione una opción</option>
+                        <option value="Feliz">Feliz</option>
+                        <option value="Triste">Triste</option>
+                        <option value="Aburrido">Aburrido</option>
+                        <option value="Furia">Furia</option>
+                        <option value="Cansancio">Cansancio</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Género</label>
+                </td>
+                <td>
+                    <label for="man">Hombre</label>
+                    <input type="radio" name="genero" value="hombre" id="hombre">
+                    <label for="woman">Mujer</label>
+                    <input type="radio" name="genero" value="mujer" id="mujer">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="color">Seleccione un color con el cual identifica su emocion</label>
+                </td>
+                <td>
+                    <input type="color" name="color" id="color">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+
+
+    <!-- =========================
+         UBICACIÓN
+    ========================== -->
+    <div class="ubicacion">
+
+        <div class="ubicacion-texto">
+
+            <div class="section-label">NUESTRA UBICACIÓN</div>
+            <h2>
+                Encuéntranos <span>📍</span>
+            </h2>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.856786045346!2d-75.5755271252489!3d6.2825502937063575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428d63a4c5f53%3A0x9781208715f7436d!2sI.E.%20Dinamarca!5e0!3m2!1ses!2sco!4v1789506627762!5m2!1ses!2sco" 
+            width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy=
+            "strict-origin-when-cross-origin"></iframe>
+
+
+
+            <!-- BOTONES -->
+            <div class="ubicacion-botones">
+
+                <button
+                    type="button"
+                    class="boton-ubicacion"
+                    onclick="mostrarUbicacion()">
+                    📍 Mostrar mi ubicación
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TARJETA VISUAL -->
+        <div class="mapa-visual">
+
+            <div class="mapa-icono">📍</div>
+
+            <h3>EmocionArte</h3>
+
+            <p>
+                Conecta tu ubicación con Google Maps
+                de manera rápida y sencilla.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JAVASCRIPT UBICACIÓN
+========================= -->
+<script>
+
+function mostrarUbicacion() {
+
+    const resultado = document.getElementById("resultadoUbicacion");
+    const mapa = document.getElementById("mapa");
+
+    if (!navigator.geolocation) {
+
+        resultado.textContent =
+            "Tu navegador no permite obtener la ubicación.";
+
+        return;
+    }
+
+    resultado.textContent =
+        "Obteniendo tu ubicación... 📍";
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(posicion) {
+
+            const latitud = posicion.coords.latitude;
+            const longitud = posicion.coords.longitude;
+
+            resultado.innerHTML =
+                "Ubicación encontrada correctamente. 📍";
+
+            mapa.href =
+                `https://www.google.com/maps?q=${latitud},${longitud}`;
+
+        },
+
+        function() {
+
+            resultado.textContent =
+                "No fue posible obtener tu ubicación. Revisa los permisos del navegador.";
+
+        }
+
+    );
+
+}
+
+</script>
+```
+
+    
+
+
+<!-- =========================
+         EXPRESA LA TUYA
+    ========================== -->
+
+    <section class="cta pestana" id="expresa">
+
+        <h2>
+            ¿Qué emoción quieres expresar?
+        </h2>
+
+
+        <p>
+            Elige una emoción, déjala salir y conviértela
+            en arte. Porque todo lo que sentimos también
+            puede convertirse en una historia.
+        </p>
+
+
+        <textarea
+            id="textoEmocion"
+            placeholder="Escribe aquí lo que estás sintiendo..."
+        ></textarea>
+
+
+        <br><br>
+
+
+        <button class="btn btn-primary" onclick="guardarEmocion()">
+            Expresar mi emoción ♡
+        </button>
+
+
+        <p id="mensaje"></p>
+
+    </section>
+
+
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer>
+
+        <div>
+            ©️ 2026 <strong>EmocionArte</strong>
+        </div>
+
+        <div>
+            Arte · Emociones · Expresión
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <scrip>
+
+
+        /* ==========================================
+           CAMBIAR DE PESTAÑA
+        ========================================== */
+
+        function mostrarPestana(nombre) {
+
+            const secciones =
+                document.querySelectorAll(".pestana");
+
+
+            // Ocultar todas las secciones
+
+            secciones.forEach(function(seccion) {
+
+                seccion.style.display = "none";
+
+            });
+
+
+            // Mostrar la sección seleccionada
+
+            const seleccion =
+                document.getElementById(nombre);
+
+
+            if (nombre === "inicio") {
+
+                seleccion.style.display = "grid";
+
+            } else if (nombre === "arte") {
+
+                seleccion.style.display = "grid";
+
+            } else {
+
+                seleccion.style.display = "block";
+
+            }
+
+
+            // Subir al inicio
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* ==========================================
+           INFORMACIÓN DE LAS EMOCIONES
+        ========================================== */
+
+        const emociones = {
+
+
+            /* ---------- ALEGRÍA ---------- */
+
+            alegria: [
+
+                {
+                    emoji: "😊",
+                    titulo: "Alegría",
+                    subtitulo: "¿Qué es?",
+                    texto:
+                    "La alegría es una emoción agradable que aparece cuando vivimos algo que nos hace sentir bien, felices o satisfechos."
+                },
+
+                {
+                    emoji: "🌸",
+                    titulo: "Alegría",
+                    subtitulo: "¿Cómo se siente?",
+                    texto:
+                    "Puede sentirse como energía, entusiasmo, ganas de sonreír y deseos de compartir momentos con otras personas."
+                },
+
+                {
+                    emoji: "🎨",
+                    titulo: "Alegría",
+                    subtitulo: "Expresarla con arte",
+                    texto:
+                    "Podemos expresar la alegría mediante colores vivos, música, baile, dibujos, fotografías o poemas."
+                }
+
+            ],
+
+
+
+            /* ---------- TRISTEZA ---------- */
+
+            tristeza: [
+
+                {
+                    emoji: "😢",
+                    titulo: "Tristeza",
+                    subtitulo: "¿Qué es?",
+                    texto:
+                    "La tristeza aparece cuando vivimos una pérdida, una decepción o una situación que nos causa dolor."
+                },
+
+                {
+                    emoji: "💧",
+                    titulo: "Tristeza",
+                    subtitulo: "¿Cómo se siente?",
+                    texto:
+                    "Podemos sentir ganas de llorar, poca energía, necesidad de estar solos o dificultad para disfrutar algunas cosas."
+                },
+
+                {
+                    emoji: "🎨",
+                    titulo: "Tristeza",
+                    subtitulo: "Expresarla con arte",
+                    texto:
+                    "Escribir, pintar, dibujar o escuchar música puede ayudarnos a expresar lo que sentimos."
+                }
+
+            ],
+
+
+
+            /* ---------- ENOJO ---------- */
+
+            enojo: [
+
+                {
+                    emoji: "😡",
+                    titulo: "Enojo",
+                    subtitulo: "¿Qué es?",
+                    texto:
+                    "El enojo aparece cuando algo nos molesta, nos lastima, nos parece injusto o no sucede como esperábamos."
+                },
+
+                {
+                    emoji: "🔥",
+                    titulo: "Enojo",
+                    subtitulo: "¿Cómo se siente?",
+                    texto:
+                    "Puede producir tensión, aumento de energía y ganas de reaccionar rápidamente."
+                },
+
+                {
+                    emoji: "🎨",
+                    titulo: "Enojo",
+                    subtitulo: "Expresarlo con arte",
+                    texto:
+                    "La pintura, la música, la escritura y el movimiento pueden ayudarnos a expresar el enojo de una manera saludable."
+                }
+
+            ],
+
+
+
+            /* ---------- AMOR ---------- */
+
+            amor: [
+
+                {
+                    emoji: "❤️",
+                    titulo: "Amor",
+                    subtitulo: "¿Qué es?",
+                    texto:
+                    "El amor nos permite sentir cariño, afecto, conexión y cercanía hacia otras personas."
+                },
+
+                {
+                    emoji: "💗",
+                    titulo: "Amor",
+                    subtitulo: "¿Cómo se siente?",
+                    texto:
+                    "Puede generar tranquilidad, felicidad, confianza y deseos de cuidar y compartir con quienes queremos."
+                },
+
+                {
+                    emoji: "🎨",
+                    titulo: "Amor",
+                    subtitulo: "Expresarlo con arte",
+                    texto:
+                    "El amor puede expresarse mediante poemas, canciones, dibujos, cartas y fotografías."
+                }
+
+            ]
+
+        };
+
+
+
+        /* ==========================================
+           VARIABLES DEL CARRUSEL
+        ========================================== */
+
+        let emocionActual = "";
+
+        let paginaActual = 0;
+
+
+
+        /* ==========================================
+           ABRIR CARRUSEL
+        ========================================== */
+
+        function abrirCarrusel(emocion) {
+
+            emocionActual = emocion;
+
+            paginaActual = 0;
+
+
+            document.getElementById("carrusel").style.display = "flex";
+
+
+            mostrarInformacion();
+
+        }
+
+
+
+        /* ==========================================
+           MOSTRAR INFORMACIÓN
+        ========================================== */
+
+        function mostrarInformacion() {
+
+            const datos =
+                emociones[emocionActual][paginaActual];
+
+
+            document.getElementById("contenidoCarrusel").innerHTML = `
+
+                <div class="info-emocion">
+
+                    <div class="icono-grande">
+                        ${datos.emoji}
+                    </div>
+
+                    <h2>
+                        ${datos.titulo}
+                    </h2>
+
+                    <h4>
+                        ${datos.subtitulo}
+                    </h4>
+
+                    <p>
+                        ${datos.texto}
+                    </p>
+
+                </div>
+
+            `;
+
+
+            document.getElementById("numeroPagina").innerText =
+                (paginaActual + 1)
+                + " / "
+                + emociones[emocionActual].length;
+
+        }
+
+
+
+        /* ==========================================
+           SIGUIENTE
+        ========================================== */
+
+        function siguiente() {
+
+            paginaActual++;
+
+
+            if (
+                paginaActual >=
+                emociones[emocionActual].length
+            ) {
+
+                paginaActual = 0;
+
+            }
+
+
+            mostrarInformacion();
+
+        }
+
+
+
+        /* ==========================================
+           ANTERIOR
+        ========================================== */
+
+        function anterior() {
+
+            paginaActual--;
+
+
+            if (paginaActual < 0) {
+
+                paginaActual =
+                    emociones[emocionActual].length - 1;
+
+            }
+
+
+            mostrarInformacion();
+
+        }
+
+
+
+        /* ==========================================
+           CERRAR CARRUSEL
+        ========================================== */
+
+        function cerrarCarrusel() {
+
+            document.getElementById("carrusel").style.display = "none";
+
+        }
+
+
+
+        /* ==========================================
+           CERRAR AL HACER CLIC AFUERA
+        ========================================== */
+
+        document.getElementById("carrusel").addEventListener(
+            "click",
+            function(event) {
+
+                if (event.target === this) {
+
+                    cerrarCarrusel();
+
+                }
+
+            }
+        );
+
+
+
+        /* ==========================================
+           EXPRESA TU EMOCIÓN
+        ========================================== */
+
+        function guardarEmocion() {
+
+            const texto =
+                document.getElementById("textoEmocion").value;
+
+
+            const mensaje =
+                document.getElementById("mensaje");
+
+
+            if (texto.trim() === "") {
+
+                mensaje.innerText =
+                    "Primero escribe lo que estás sintiendo 💗";
+
+                return;
+
+            }
+
+
+            mensaje.innerText =
+                "Tu emoción también es arte. 💗🎨";
+
+        }
+
+
+
+        /* ==========================================
+           AL CARGAR LA PÁGINA
+        ========================================== */
+
+        window.onload = function() {
+
+            mostrarPestana("inicio");
+
+        };
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.querySelector(".formulario-emocion");
+    const mensaje = document.getElementById("mensajeExito");
+
+    if (!formulario || !mensaje) {
+        console.error("No se encontró el formulario o el mensaje.");
+        return;
+    }
+
+    formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        if (!formulario.checkValidity()) {
+            formulario.reportValidity();
+            return;
+        }
+
+        mensaje.style.display = "flex";
+
+        setTimeout(function () {
+            mensaje.style.display = "none";
+            formulario.reset();
+        }, 3000);
+    });
+});
+</script>
+
+</body>
+
+</html>

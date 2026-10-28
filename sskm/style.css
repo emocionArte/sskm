@@ -1,0 +1,2496 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f9f1f6;
+    color: #29242a;
+}
+
+
+/* =========================
+   MENÚ DE NAVEGACIÓN
+========================= */
+
+header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 18px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eadce5;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #b34f68;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #d98aa2,
+        #9d719c
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 20px;
+}
+
+
+/* MENÚ */
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #4c424a;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b34f68;
+}
+
+
+/* BOTÓN DEL MENÚ */
+
+.nav-button {
+    background: #b75c70;
+
+    color: white !important;
+
+    padding: 11px 22px;
+
+    border-radius: 25px;
+}
+
+.nav-button:hover {
+    background: #963e55;
+}
+
+
+/* =========================
+   SECCIÓN PRINCIPAL
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 80px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            #f1c8d8 0%,
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #f9eef5,
+            #eadce9
+        );
+}
+
+
+/* TEXTO */
+
+.hero-text {
+    max-width: 590px;
+}
+
+
+/* ETIQUETA */
+
+.tag {
+    display: inline-block;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border: 1px solid ;
+
+    border-radius: 20px;
+
+    padding: 9px 17px;
+
+    color: #8e6478;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+    font-size: clamp(55px, 7vw, 88px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ad5269;
+}
+
+
+/* PÁRRAFO */
+
+.hero p {
+    color: #71666e;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    max-width: 540px;
+
+    margin-bottom: 35px;
+}
+
+
+/* BOTONES */
+
+.buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+
+    padding: 14px 27px;
+
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #b75c70;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #943d54;
+
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    color: #80596c;
+
+    border: 1px solid #cfaabb;
+
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.btn-secondary:hover {
+    background: white;
+}
+
+
+/* =========================
+   ARTE PRINCIPAL
+========================= */
+
+.hero-art {
+    position: relative;
+
+    height: 430px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(221, 127, 82, 0.9),
+            rgba(163, 76, 92, 0.95),
+            rgba(113, 78, 116, 0.95)
+        );
+
+    box-shadow:
+        0 25px 50px
+        rgba(110, 70, 100, 0.18);
+}
+
+
+/* MANCHAS DE PINTURA */
+
+.paint {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(1px);
+
+    opacity: 0.8;
+}
+
+.paint1 {
+    width: 330px;
+    height: 130px;
+
+    background: #edb05e;
+
+    top: 40px;
+    left: -50px;
+
+    transform: rotate(-20deg);
+}
+
+.paint2 {
+    width: 380px;
+    height: 150px;
+
+    background: #9c304b;
+
+    bottom: 60px;
+    right: -70px;
+
+    transform: rotate(18deg);
+}
+
+.paint3 {
+    width: 250px;
+    height: 100px;
+
+    background: #e88d47;
+
+    top: 180px;
+    right: 20px;
+
+    transform: rotate(-15deg);
+}
+
+.paint4 {
+    width: 280px;
+    height: 100px;
+
+    background: #6c416f;
+
+    bottom: 20px;
+    left: 10px;
+
+    transform: rotate(12deg);
+}
+
+
+/* ICONO CENTRAL */
+.hero img {
+    border-radius: 25px;
+}
+.person {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -45%);
+
+    text-align: center;
+
+    font-size: 150px;
+
+    filter:
+        drop-shadow(
+            10px 15px 10px
+            rgba(0, 0, 0, 0.25)
+        );
+}
+
+
+/* CORAZÓN */
+
+.heart {
+    position: absolute;
+
+    top: 30px;
+    right: 35px;
+
+    font-size: 42px;
+
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.intro {
+    text-align: center;
+
+    padding: 90px 8%;
+
+    background: #fffec2;
+}
+
+.section-label {
+    color: #ad5269;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+    font-size: 45px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.intro p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #746a70;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   EMOCIONES
+========================= */
+
+.emotions {
+    padding: 90px 8%;
+
+    background: #ffdfdf;
+}
+
+.emotions-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.emotions-title h2 {
+    font-size: 45px;
+
+    font-weight: 500;
+
+    margin-top: 10px;
+}
+
+
+/* TARJETAS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.card {
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px
+        rgba(100, 70, 90, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 35px
+        rgba(100, 70, 90, 0.14);
+}
+
+
+/* EMOJIS */
+
+.emoji {
+    width: 75px;
+    height: 75px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f5dce7;
+
+    font-size: 37px;
+
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO TARJETA */
+
+.card h3 {
+    font-size: 25px;
+
+    margin-bottom: 12px;
+
+    color: #6f4358;
+}
+
+
+/* TEXTO TARJETA */
+
+.card p {
+    font-family: Arial, sans-serif;
+
+    color: #776d73;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   SECCIÓN ARTE
+========================= */
+
+.art-section {
+    padding: 100px 8%;
+
+    background: #f9f1f6;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* CAJA ARTÍSTICA */
+
+.art-box {
+    min-height: 390px;
+
+    border-radius: 30px;
+
+    padding: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7b1c2,
+            #9c718e
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.art-box::before,
+.art-box::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.25);
+}
+
+.art-box::before {
+    width: 240px;
+    height: 240px;
+
+    top: -80px;
+    left: -70px;
+}
+
+.art-box::after {
+    width: 300px;
+    height: 300px;
+
+    right: -120px;
+    bottom: -130px;
+}
+
+
+/* MENSAJE */
+
+.art-message {
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    text-align: center;
+}
+
+.art-message span {
+    font-size: 65px;
+}
+
+.art-message h3 {
+    font-size: 34px;
+
+    margin-top: 15px;
+}
+
+
+/* CONTENIDO */
+
+.art-content h2 {
+    font-size: 48px;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.art-content h2 span {
+    color: #b2576c;
+}
+
+.art-content p {
+    color: #71686e;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* LISTA */
+
+.list {
+    list-style: none;
+
+    margin-top: 25px;
+}
+
+.list li {
+    margin-bottom: 14px;
+
+    font-family: Arial, sans-serif;
+
+    color: #5d5359;
+}
+
+.list li::before {
+    content: "♡";
+
+    color: #b2576c;
+
+    font-size: 20px;
+
+    margin-right: 10px;
+}
+
+
+/* =========================
+   SECCIÓN FINAL
+========================= */
+
+.cta {
+    padding: 90px 8%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9e687f,
+            #c0788f
+        );
+
+    color: white;
+}
+
+.cta h2 {
+    font-size: 48px;
+
+    font-weight: 500;
+
+    margin-bottom: 18px;
+}
+
+.cta p {
+    font-family: Arial, sans-serif;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.cta .btn {
+    background: white;
+
+    color: #96536b;
+}
+/* =========================
+   CAJA PARA EXPRESAR EMOCIONES
+========================= */
+
+.cta textarea {
+    width: 70%;
+    max-width: 700px;
+    height: 150px;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    border: 1px solid #d8bfd0;
+    border-radius: 20px;
+
+    background: #fffdfb;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    resize: none;
+    outline: none;
+}
+
+.cta textarea:focus {
+    border-color: #a85b7b;
+
+    box-shadow:
+        0 0 0 3px rgba(168, 91, 123, 0.12);
+}
+
+
+.cta button {
+    border: none;
+    cursor: pointer;
+}
+
+
+#mensaje {
+    margin-top: 20px;
+
+    color: #8f4968;
+
+    font-weight: bold;
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    background: #30272e;
+
+    color: #ddd;
+
+    padding: 35px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+footer strong {
+    color: #e49aad;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .art-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-art {
+        height: 330px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h2,
+    .emotions-title h2,
+    .art-content h2,
+    .cta h2 {
+        font-size: 35px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+        
+        
+    }
+}
+/* =========================
+   CARRUSEL DE EMOCIONES
+   ========================= */
+
+.carrusel-fondo {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(48, 39, 46, 0.65);
+
+    z-index: 2000;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+/* CAJA DEL CARRUSEL */
+
+.carrusel {
+    width: 90%;
+    max-width: 600px;
+
+    min-height: 430px;
+
+    background: #fffafc;
+
+    border-radius: 30px;
+
+    padding: 50px 45px 35px;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 60px
+        rgba(70, 40, 60, 0.25);
+
+    animation: aparecerCarrusel 0.3s ease;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes aparecerCarrusel {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* BOTÓN CERRAR */
+
+.cerrar {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1d9e4;
+
+    color: #7c4c62;
+
+    font-size: 28px;
+
+    line-height: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cerrar:hover {
+    background: #dba8ba;
+
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* INFORMACIÓN */
+
+.info-emocion {
+    text-align: center;
+
+    padding: 10px 15px 20px;
+}
+
+
+/* EMOJI GRANDE */
+
+.icono-grande {
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #f5dce7;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(150, 90, 120, 0.12);
+}
+
+
+/* TÍTULO */
+
+.info-emocion h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 36px;
+
+    font-weight: 500;
+
+    color: #6f4358;
+
+    margin-bottom: 10px;
+}
+
+
+/* SUBTÍTULO */
+
+.info-emocion h4 {
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    color: #b2576c;
+
+    margin-bottom: 18px;
+
+    letter-spacing: 1px;
+}
+
+
+/* TEXTO */
+
+.info-emocion p {
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    color: #71666e;
+
+    line-height: 1.8;
+
+    max-width: 480px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   CONTROLES DEL CARRUSEL
+========================= */
+
+.controles {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 15px;
+}
+
+
+/* BOTONES ANTERIOR / SIGUIENTE */
+
+.controles button {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #b75c70;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.controles button:hover {
+    background: #963e55;
+
+    transform: scale(1.08);
+}
+
+
+/* NÚMERO DE PÁGINA */
+
+#numeroPagina {
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    color: #806070;
+
+    min-width: 45px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   CARRUSEL EN CELULAR
+========================= */
+
+@media (max-width: 650px) {
+
+    .carrusel {
+        width: 95%;
+
+        min-height: 400px;
+
+        padding: 45px 25px 25px;
+
+        border-radius: 25px;
+    }
+
+
+    .icono-grande {
+        width: 80px;
+        height: 80px;
+
+        font-size: 45px;
+    }
+
+
+    .info-emocion h2 {
+        font-size: 30px;
+    }
+
+
+    .info-emocion p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .controles {
+        gap: 18px;
+    }
+
+
+    .controles button {
+        width: 40px;
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+}
+/* =========================
+   ACTIVIDADES ARTÍSTICAS
+========================= */
+
+.actividades-arte {
+    grid-column: 1 / -1;
+
+    margin-top: 20px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 30px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(100, 70, 90, 0.08);
+}
+
+.actividades-arte h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    color: #29242a;
+
+    margin-bottom: 30px;
+}
+
+.actividad {
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eadce5;
+}
+
+.actividad:last-child {
+    border-bottom: none;
+}
+
+.actividad strong {
+    display: block;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    color: #6f4358;
+
+    margin-bottom: 8px;
+}
+
+.actividad p {
+    font-family: Arial, sans-serif;
+
+    color: #71686e;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+    max-width: 100%;
+}
+
+
+/* =========================
+   ACTIVIDADES EN CELULAR
+========================= */
+
+@media (max-width: 650px) {
+
+    .actividades-arte {
+        padding: 30px 22px;
+
+        margin-top: 10px;
+    }
+
+    .actividades-arte h3 {
+        font-size: 30px;
+    }
+
+    .actividad strong {
+        font-size: 18px;
+    }
+
+    .actividad p {
+        font-size: 14px;
+    }
+
+}
+/* =========================
+   PESTAÑA CONTACTO
+========================= */
+
+.contacto {
+    min-height: 100vh;
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #f9f1f6, #eee2f5);
+    display: grid;
+    gap: 45px;
+}
+
+.contacto-titulo {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+}
+
+.contacto-titulo h2 {
+    font-size: 42px;
+    color: #30272e;
+    margin: 15px 0;
+}
+
+.contacto-titulo h2 span {
+    color: #b75c70;
+}
+
+.contacto-titulo p {
+    color: #6f6069;
+    font-size: 17px;
+}
+
+
+/* EQUIPO */
+
+.equipo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.persona {
+    background: white;
+    border-radius: 25px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(130, 90, 120, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.persona:hover {
+    transform: translateY(-7px);
+}
+
+
+/* FOTOS REDONDAS */
+
+.foto-persona {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ead0df;
+    background: #f6e8f1;
+
+}
+
+.foto-persona img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.persona h3 {
+    color: #30272e;
+    font-size: 21px;
+    margin: 10px 0 5px;
+}
+
+.persona h4 {
+    color: #b75c70;
+    font-size: 15px;
+    margin: 10px 0 5px;
+}
+
+.persona p {
+    color: #756873;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0 5px;
+}
+```css
+/* CUADRO DEL FORMULARIO */
+.formulario-emocion {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 2px solid #d8a4d8;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* TÍTULO */
+.formulario-emocion h2 {
+    text-align: center;
+    color: #8e548f;
+    margin-bottom: 25px;
+}
+
+/* ETIQUETAS */
+.formulario-emocion label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #5d4960;
+    font-weight: bold;
+}
+
+/* CAMPOS */
+.formulario-emocion input[type="text"],
+.formulario-emocion input[type="number"],
+.formulario-emocion textarea,
+.formulario-emocion select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c9a6c9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* EXPERIENCIA */
+.formulario-emocion textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* COLOR */
+.formulario-emocion input[type="color"] {
+    width: 60px;
+    height: 40px;
+    margin-top: 8px;
+    border: none;
+}
+
+/* BOTONES */
+.formulario-emocion input[type="submit"],
+.formulario-emocion input[type="reset"] {
+    padding: 10px 25px;
+    margin-top: 20px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 12px;
+    background-color: #d477c5;
+    color: white;
+    cursor: pointer;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.formulario-emocion input[type="submit"]:hover,
+.formulario-emocion input[type="reset"]:hover {
+    background-color: #a957a5;
+.cuadro {
+    width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border: 3px solid #d58bd5;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+}
+/* FORMULARIO */
+
+.formulario-emocion {
+    max-width: 1100px;
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 40px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #fff, #f5e8f1);
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items : center;
+    box-shadow: 0 10px 30px rgba(130, 90, 120, 0.12);
+}
+
+/* UBICACIÓN */
+
+.ubicacion {
+    max-width: 1100px;
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 40px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #fff, #f5e8f1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(130, 90, 120, 0.12);
+}
+
+.ubicacion-texto h2 {
+    color: #30272e;
+    font-size: 32px;
+}
+
+.ubicacion-texto h2 span {
+    color: #b75c70;
+}
+
+.ubicacion-texto p {
+    color: #756873;
+    line-height: 1.6;
+}
+
+
+.ubicacion-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+
+.boton-ubicacion,
+.boton-maps {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 25px;
+    background: #b75c70;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-ubicacion:hover,
+.boton-maps:hover {
+    background: #963e55;
+}
+
+
+#resultadoUbicacion {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    background: #f9edf4;
+    color: #6f6069;
+    line-height: 1.6;
+}
+
+/* PARTE VISUAL DE UBICACIÓN */
+
+.mapa-visual {
+    min-height: 250px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ead7eb, #f4dce6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.mapa-icono {
+    font-size: 65px;
+}
+
+.mapa-visual h3 {
+    color: #30272e;
+    font-size: 25px;
+}
+
+.mapa-visual p {
+    color: #6f6069;
+    max-width: 350px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .equipo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ubicacion {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contacto {
+        padding: 60px 20px;
+    }
+
+    .contacto-titulo h2 {
+        font-size: 32px;
+    }
+
+    .equipo {
+        grid-template-columns: 1fr;
+    }
+
+    .ubicacion {
+        padding: 25px;
+    }
+
+    .ubicacion-botones {
+        flex-direction: column;
+    }
+
+    .boton-ubicacion,
+    .boton-maps {
+        text-align: center;
+    }
+
+}
+
+/* ==========================================
+   EXPRESA LA TUYA
+========================================== */
+
+.titulo-emocion {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: white;
+}
+
+
+/* BOTONES DE EMOCIONES */
+
+.selector-emociones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px auto;
+    max-width: 750px;
+}
+
+.boton-emocion {
+    width: 105px;
+    height: 90px;
+
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 8px 20px rgba(60,30,50,0.15);
+}
+
+.boton-emocion span {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* COLORES */
+
+.alegria {
+    background: #f8e7a8;
+    color: #765c19;
+}
+
+.tristeza {
+    background: #c5dff5;
+    color: #42617a;
+}
+
+.enojo {
+    background: #f3b6b6;
+    color: #823f4c;
+}
+
+.miedo {
+    background: #d8c6ed;
+    color: #604b72;
+}
+
+.calma {
+    background: #c5e3d2;
+    color: #456b57;
+}
+
+.amor {
+    background: #f5c2d1;
+    color: #85445c;
+}
+
+
+/* EFECTO */
+
+.boton-emocion:hover {
+    transform: translateY(-7px) scale(1.05);
+    box-shadow: 0 14px 25px rgba(60,30,50,0.25);
+}
+
+
+/* EMOCIÓN ELEGIDA */
+
+#emocionElegida {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 15px 20px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.85);
+
+    color: #8f4968;
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+
+    box-shadow: 0 8px 20px rgba(60,30,50,0.12);
+}
+
+
+/* RETO */
+
+.reto-emocion {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.15);
+
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.reto-emocion h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.reto-emocion p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+/* BOTÓN RETO */
+
+.btn-reto {
+    padding: 11px 22px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: white;
+    color: #96536b;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-reto:hover {
+    transform: scale(1.05);
+}
+
+
+/* CONTADOR */
+
+.contador-emociones {
+    color: rgba(255,255,255,0.8) !important;
+
+    font-size: 13px !important;
+
+    margin-top: 5px !important;
+}
+
+
+/* MENSAJE */
+
+#mensaje {
+    min-height: 25px;
+
+    margin-top: 20px;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+
+    .selector-emociones {
+        gap: 10px;
+    }
+
+    .boton-emocion {
+        width: 90px;
+        height: 80px;
+        font-size: 25px;
+    }
+
+}
+/* =====================================================
+   DISEÑO RESPONSIVE - EMOCIONARTE
+   ===================================================== */
+
+
+/* ==============================
+   TABLETS
+   ============================== */
+
+@media (max-width: 1000px) {
+
+    /* HEADER */
+
+    header {
+        padding: 15px 30px;
+    }
+
+    header nav {
+        gap: 12px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+
+    /* INICIO */
+
+    .hero {
+        padding: 50px 6%;
+        gap: 30px;
+    }
+
+    .hero-text {
+        width: 50%;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        width: 45%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* EMOCIONES */
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 5%;
+    }
+
+
+    /* ARTE */
+
+    .art-section {
+        padding: 60px 6%;
+    }
+
+    .art-box {
+        width: 45%;
+    }
+
+    .art-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    .art-content {
+        width: 50%;
+    }
+
+
+    /* ACTIVIDADES */
+
+    .actividades-arte {
+        padding: 40px 5%;
+    }
+
+    .actividad {
+        margin-bottom: 20px;
+    }
+
+
+    /* CONTACTO */
+
+    .equipo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 5%;
+    }
+
+
+    /* UBICACIÓN */
+
+    .ubicacion {
+        padding: 40px 5%;
+    }
+
+}
+
+
+/* ==============================
+   CELULARES
+   ============================== */
+
+@media (max-width: 700px) {
+
+    /* ==========================
+       HEADER
+       ========================== */
+
+    header {
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    header nav {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+
+    header nav a {
+        font-size: 13px;
+
+        padding: 8px 10px;
+    }
+
+    .nav-button {
+        width: auto;
+    }
+
+
+    /* ==========================
+       INICIO
+       ========================== */
+
+    .hero {
+        min-height: auto;
+
+        padding: 45px 25px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+
+        line-height: 1.1;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .buttons {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    .buttons .btn {
+        width: 100%;
+
+        max-width: 300px;
+
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 80%;
+
+        max-width: 350px;
+
+        height: auto;
+    }
+
+    .heart {
+        font-size: 30px;
+    }
+
+
+    /* ==========================
+       EMOCIONES
+       ========================== */
+
+    .emotions {
+        padding: 50px 20px;
+    }
+
+    .emotions-title {
+        text-align: center;
+
+        padding: 0 10px;
+    }
+
+    .emotions-title h2 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+    .cards {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        padding: 0;
+    }
+
+    .card {
+        width: 100%;
+
+        padding: 25px;
+
+        text-align: center;
+    }
+
+    .emoji {
+        font-size: 55px;
+    }
+
+
+    /* ==========================
+       CARRUSEL
+       ========================== */
+
+    .carrusel-fondo {
+        padding: 20px;
+    }
+
+    .carrusel {
+        width: 100%;
+
+        max-width: 500px;
+
+        max-height: 90vh;
+
+        overflow-y: auto;
+
+        padding: 25px 20px;
+    }
+
+    .icono-grande {
+        font-size: 65px;
+    }
+
+    .info-emocion h2 {
+        font-size: 28px;
+    }
+
+    .info-emocion p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .controles {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    /* ==========================
+       ARTE
+       ========================== */
+
+    .art-section {
+        padding: 50px 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .art-box {
+        width: 100%;
+
+        order: 1;
+    }
+
+    .art-box img {
+        width: 100%;
+
+        max-width: 450px;
+
+        height: auto;
+
+        display: block;
+
+        margin: auto;
+    }
+
+    .art-content {
+        width: 100%;
+
+        order: 2;
+
+        text-align: center;
+    }
+
+    .art-content h2 {
+        font-size: 32px;
+
+        line-height: 1.2;
+    }
+
+    .art-content p {
+        line-height: 1.7;
+    }
+
+    .list {
+        text-align: left;
+
+        padding-left: 20px;
+    }
+
+
+    /* ==========================
+       ACTIVIDADES
+       ========================== */
+
+    .actividades-arte {
+        width: 100%;
+
+        padding: 35px 20px;
+    }
+
+    .actividades-arte h3 {
+        font-size: 25px;
+    }
+
+    .actividad {
+        width: 100%;
+
+        padding: 20px;
+
+        margin-bottom: 15px;
+    }
+
+    .actividad p {
+        line-height: 1.6;
+    }
+
+
+    /* ==========================
+       CONTACTO
+       ========================== */
+
+    .contacto {
+        padding: 50px 20px;
+    }
+
+    .contacto-titulo {
+        text-align: center;
+    }
+
+    .contacto-titulo h2 {
+        font-size: 32px;
+
+        line-height: 1.2;
+    }
+
+    .equipo {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 0;
+    }
+
+    .persona {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 25px;
+    }
+
+    .foto-persona img {
+        width: 150px;
+
+        height: 150px;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+    }
+
+
+    /* ==========================
+       FORMULARIO
+       ========================== */
+
+    .formulario-emocion {
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding: 10px;
+    }
+
+    .formulario-emocion table {
+        width: 100%;
+    }
+
+    .formulario-emocion td {
+        display: block;
+
+        width: 100%;
+
+        padding: 7px 0;
+    }
+
+    .formulario-emocion input,
+    .formulario-emocion textarea,
+    .formulario-emocion select {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 10px;
+    }
+
+    .formulario-emocion textarea {
+        min-height: 120px;
+    }
+
+
+    /* ==========================
+       UBICACIÓN
+       ========================== */
+
+    .ubicacion {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+        padding: 40px 20px;
+    }
+
+    .ubicacion-texto {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .ubicacion iframe {
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 280px;
+    }
+
+    .mapa-visual {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* ==========================
+       EXPRESA LA TUYA
+       ========================== */
+
+    .cta {
+        padding: 50px 20px;
+
+        text-align: center;
+    }
+
+    .cta h2 {
+        font-size: 32px;
+
+        line-height: 1.2;
+    }
+
+    .cta p {
+        line-height: 1.7;
+    }
+
+    #textoEmocion {
+        width: 100%;
+
+        min-height: 150px;
+
+        padding: 15px;
+    }
+
+    .cta .btn {
+        width: 100%;
+
+        max-width: 300px;
+    }
+
+
+    /* ==========================
+       FOOTER
+       ========================== */
+
+    footer {
+        padding: 30px 20px;
+
+        text-align: center;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* ==============================
+   CELULARES MUY PEQUEÑOS
+   ============================== */
+
+@media (max-width: 400px) {
+
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo span {
+        font-size: 20px;
+    }
+
+    header nav a {
+        font-size: 12px;
+
+        padding: 6px 7px;
+    }
+
+    .hero {
+        padding: 35px 18px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 90%;
+    }
+
+    .emotions-title h2 {
+        font-size: 26px;
+    }
+
+    .art-content h2 {
+        font-size: 28px;
+    }
+
+    .contacto-titulo h2 {
+        font-size: 28px;
+    }
+
+.fondo-mensaje {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 25, 60, 0.60);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.cuadro-mensaje {
+    background: #fffef8;
+    width: 90%;
+    max-width: 850px;
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    animation: aparecer 0.3s ease;
+}
+
+.cuadro-mensaje h2 {
+    color: #32a852;
+    font-size: 30px;
+}
+
+.cuadro-mensaje p {
+    color: #102653;
+    font-size: 22px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
